@@ -36,6 +36,13 @@ class SomeServiceTest {
         assertThat(someService.fizzBuzz(11)).isEqualTo("11");
     }
 
+    // 3.2
+
+    @Test
+    void firstLast6(){
+        assertThat(someService.firstLast6(new int[]{4, 5, 12, 4, 6, 6})).isTrue();
+    }
+
     void multipleThreeNotFiveReturnsFizz(int n) {
         // assertEquals...
     }
