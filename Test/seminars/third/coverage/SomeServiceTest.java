@@ -40,7 +40,7 @@ class SomeServiceTest {
 
     @Test
     void firstLast6(){
-        assertThat(someService.firstLast6(new int[]{4, 5, 12, 4, 6, 6})).isTrue();
+        assertThat(someService.firstLast6(new int[]{6, 4, 5, 12, 4})).isTrue();
     }
 
 /*    void multipleThreeNotFiveReturnsFizz(int n) {
