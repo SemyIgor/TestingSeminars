@@ -25,16 +25,24 @@ public class SomeService {
     /**
      * 3.3. Метод подсчета скидки
      */
-    public double calculatingDiscount(double purchaseAmount, int discountAmount) {
 
-        return purchaseAmount;
+    public static double calculatingDiscount(double purchaseAmount, int discountAmount){
+        if(purchaseAmount < 0) throw new RuntimeException("Negative purchase amount");
+        if(discountAmount < 0) throw new IllegalStateException("Negative discount");
+        else if (discountAmount > 100) throw new IllegalStateException("Too much discount");
+        else return purchaseAmount * (1.0 - discountAmount / 100.0);
+
     }
 
-
     /**
-     * 3.4. Метод принимает на вход 3 числа (int a, b, c). Нужно вернуть их сумму. Однако, если одно из значений равно 13,
-     * то оно не учитывается в сумме. Так, например, если b равно 13, то считается сумма только a и c.
+     * 3.4. Метод принимает на вход 3 числа (int a, b, c). Нужно вернуть их сумму.
+     * Однако, если одно из значений равно 13, то оно не учитывается в сумме.
+     * Так, например, если b равно 13, то считается сумма только a и c.
      */
-
+    public static int luckySum(int a, int b, int c){
+        return ((a==13) ? 0 : a) +
+               ((b==13) ? 0 : b) +
+               ((c==13 ? 0 : c));
+    }
 
 }
