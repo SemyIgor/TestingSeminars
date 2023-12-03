@@ -1,7 +1,7 @@
 package seminars.fourth.hotel;
 
 public class BookingService {
-    private HotelService hotelService;
+    public HotelService hotelService;
 
     public BookingService(HotelService hotelService) {
         this.hotelService = hotelService;

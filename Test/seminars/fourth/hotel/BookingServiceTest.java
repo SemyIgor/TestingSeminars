@@ -17,10 +17,12 @@ class BookingServiceTest {
     void setUp(){
         mockHotelService = mock(HotelService.class);
         bookingService = new BookingService(mockHotelService);
+
     }
 
     @Test
     void testEvenNumber(){
+        when(mockHotelService.isRoomAvailable(18)).thenReturn(true);
         boolean result = bookingService.bookRoom(18);
 
         assertTrue(result);
@@ -28,6 +30,7 @@ class BookingServiceTest {
 
     @Test
     void testOddNumber(){
+        when(mockHotelService.isRoomAvailable(19)).thenReturn(false);
         boolean resultNegative = bookingService.bookRoom(19);
 
         assertFalse(resultNegative);
