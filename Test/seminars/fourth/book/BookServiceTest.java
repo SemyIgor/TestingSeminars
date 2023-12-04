@@ -33,7 +33,7 @@ class BookServiceTest {
 
         List<Book> allBooks = bookService.findAllBooks();
 
-        verify(bookRepositoryMock).findAll();
+        verify(bookRepositoryMock, times(1)).findAll();
         assertThat(allBooks.size()).isEqualTo(2);
     }
 

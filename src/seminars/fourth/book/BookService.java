@@ -3,7 +3,7 @@ package seminars.fourth.book;
 import java.util.List;
 
 public class BookService {
-    private BookRepository bookRepository;
+    final BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
