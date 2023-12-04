@@ -7,7 +7,6 @@ public class WebService {
     }
 
     public String sendRequest(String request){
-        String requestResult = httpClient.get(request);
-        return requestResult;
+        return httpClient.get(request);
     }
 }
