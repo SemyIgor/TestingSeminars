@@ -1,13 +1,13 @@
 package seminars.fourth.http;
 
 public class WebService {
-    private HttpClient httpClient;
+    final HttpClient httpClient;
     public WebService(HttpClient httpClient){
         this.httpClient = httpClient;
     }
 
     public String sendRequest(String request){
-        String res = httpClient.get(request);
-        return res;
+        String requestResult = httpClient.get(request);
+        return requestResult;
     }
 }
