@@ -23,5 +23,4 @@ class WebServiceTest {
         verify(httpClientMock).get("Request URL");
         assertThat(result).isEqualTo("Request OK");
     }
-
 }

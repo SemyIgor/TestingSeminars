@@ -21,7 +21,7 @@ class DataProcessorTest {
         DataProcessor dataProcessor = new DataProcessor(databaseMock);
 //        Описываем действия, которые должны происходить при вызове объекта - заглушки:
 //        когда на объекте-заглушке вызовется метод query() с параметром
-//        "anyString() - (любая строка), тогда возвращаем массив в виде следующих строк -
+//        "anyString()" - (любая строка), тогда возвращаем массив в виде следующих строк -
 //        "Data1", "Data2", "Data3"
         when(databaseMock.query(anyString())).thenReturn(Arrays.asList("Data1", "Data2", "Data3"));
 
@@ -31,7 +31,8 @@ class DataProcessorTest {
         List<String> result = dataProcessor.processData("Запрос SQL");
 
 //        НАЧАЛО ПРОВЕРКИ
-//        Убеждаемся, что наша заглушка работает, причём только 1 раз:
+//        Убеждаемся, что наша заглушка работает, причём только 1 раз и то, что
+//        заглушка отработала именно! с методом .query и параметром "Запрос SQL":
 //        (Mockito Verify methods are used to check that certain behavior happened.
 //        We can use Mockito verify methods at the end of the testing method code
 //        to make sure that specified methods are called.)
