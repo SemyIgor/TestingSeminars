@@ -12,6 +12,12 @@ class WebServiceTest {
         WebService webService = new WebService(httpClientMock);
         when(httpClientMock.get(anyString())).thenReturn("Request OK");
 
+//        Проверка (не тест!) работы сервиса без заглушки
+/*        HttpClient httpClientTest = new HttpClient();
+        WebService webServiceTest = new WebService(httpClientTest);
+        System.out.println(webServiceTest.sendRequest("Request VK"));
+        System.out.println(webServiceTest.sendRequest("Request Incorrect"));*/
+
         String result = webService.sendRequest("Request URL");
 
         verify(httpClientMock).get("Request URL");

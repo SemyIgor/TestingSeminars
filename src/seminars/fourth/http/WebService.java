@@ -7,7 +7,7 @@ public class WebService {
     }
 
     public String sendRequest(String request){
-        String res = httpClient.get("Request URL");
+        String res = httpClient.get(request);
         return res;
     }
 }
