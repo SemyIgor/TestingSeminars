@@ -10,11 +10,22 @@
 Unit-тесты:
 1. ToDoList.addTask(String task); void
 2. ToDoList.removeTask(); void
-3. ToDoList.editTask(double taskId); return String taskText
+3. ToDoList.getTaskById(double taskId); Task task
 4. ToDoList.saveTaskList(List<Task> tasks); void
 5. ToDoList.getTaskList(String listName); List<Task> tasks
 6. Contacts.getUserById(double userId); User user
 7. Contacts.addUser(User user); void
+8. Getters & Setters for user (userID, fullName, phoneNumber, address, status, relations, etc.)
+9. Getters & Setters for toDoList (taskId, date, text, status, importance, etc.)
+
+Интеграционные тесты:
+1. ToDoList.editTask(getTaskById(double taskId)); return Task task
+2. Contacts.editUser(getUserById(double userId)); User user
+
+Сквозные тесты:
+1. Создать задачу, используя UI, сохранить задачу в облако.
+2. Получить задачу из облака, отредактировать и сохранить в облако.
+3. Получить список задач из облака и вывести его на экран
 
 Задание 2. Ниже список тестовых сценариев. Ваша задача - определить тип каждого теста (юнит-тест,
 интеграционный тест, сквозной тест) и объяснить, почему вы так решили.
