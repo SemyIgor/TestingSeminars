@@ -1,5 +1,6 @@
 # import unittest
 # import pytest
+import pytest
 
 from Maxaverage import Maxaverage
 
@@ -16,6 +17,12 @@ def test_average_zero():
 def test_average_alone():
     # numbers = [7]
     assert Maxaverage.find_average([7]) == 7
+
+
+def test_average_not_number():
+    string_list = ["c"]
+    with pytest.raises(TypeError):
+        Maxaverage.find_average(string_list)
 
 
 def test_find_max_first():
