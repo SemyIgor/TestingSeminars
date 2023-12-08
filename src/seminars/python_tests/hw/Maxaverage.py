@@ -6,6 +6,8 @@ class Maxaverage:
         if not numbers:
             return 0
         return sum(numbers) / len(numbers)
+
+
     @staticmethod
     def find_max(a, b):
         if a > b:

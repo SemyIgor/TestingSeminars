@@ -25,6 +25,12 @@ def test_average_not_number():
         Maxaverage.find_average(string_list)
 
 
+def test_average_not_list():
+    string_list = 10
+    with pytest.raises(TypeError):
+        Maxaverage.find_average(string_list)
+
+
 def test_find_max_first():
     assert Maxaverage.find_max(30, 25) == "Первый список имеет большее среднее значение"
 
